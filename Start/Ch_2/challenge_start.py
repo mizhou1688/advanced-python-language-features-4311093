@@ -16,7 +16,12 @@ def string_combiner(*args, unique=False):
     result = ""
 
     # YOUR CODE HERE
-
+    for item in args:
+        if item.isnumeric():
+            result += str(item)
+        elif isinstance(item, str):
+            result += item
+        
     return result
 
 
